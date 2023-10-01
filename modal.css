@@ -31,7 +31,9 @@ img {
 }
 
 .topnav {
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 3.5%;
 }
 
@@ -41,6 +43,11 @@ img {
 
 .main-navbar {
     float: right;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 0 5px;
 }
 
 .topnav a {
@@ -49,7 +56,6 @@ img {
     color: #000000;
     text-align: center;
     padding: 12px 12px;
-    margin: 5px;
     text-decoration: none;
     font-size: 20px;
     font-family: Roboto, sans-serif;
@@ -72,8 +78,21 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+
+    .topnav {
+        align-items: flex-start;
+    }
+
+    .main-navbar {
+        flex-direction: column;
+        margin: unset;
+        height: 48px;
+        overflow: hidden;
+    }
+
     .topnav a {
         display: none;
+        height: 48px;
     }
 
     .topnav a.icon {
@@ -87,10 +106,26 @@ img {
         position: relative;
     }
 
+    .topnav.responsive .main-navbar {
+        top: -6px;
+        right: -6px;
+        position: absolute;
+        overflow: visible;
+        z-index: 9999;
+        height: unset;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        padding: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
     .topnav.responsive .icon {
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 5px;
+        top: 5px;
     }
 
     .topnav.responsive a {
@@ -105,10 +140,10 @@ img {
         display: none;
     }
 
-    .topnav a.icon {
-        float: right;
-        display: block;
-        margin-top: -15px;
+    .topnav.responsive .main-navbar {
+        width: 100%;
+        top: unset;
+        right: unset;
     }
 }
 
