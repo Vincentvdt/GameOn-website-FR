@@ -48,17 +48,6 @@ const closeModal = () => {
     }
 };
 
-const handleFormSubmit = e => {
-    e.preventDefault()
-    const isValid = validateForm()
-
-    if (isValid) {
-        displaySuccessMessage()
-    } else {
-        errorSubmit()
-    }
-}
-
 // Initialize default variables
 let formData = {};
 let hasError = false;
@@ -77,6 +66,16 @@ const getAllInputs = () => {
     };
 };
 getAllInputs();
+
+const handleFormSubmit = e => {
+    e.preventDefault()
+    const isValid = validateForm()
+    if (isValid) {
+        displaySuccessMessage()
+    } else {
+        errorSubmit()
+    }
+}
 
 // Function for live input validation
 const inlineValidation = () => {
@@ -98,18 +97,21 @@ const validateForm = () => {
     for (const name in formData) {
         let input = formData[name];
         resetError(input);
+
         if (isRequired(input)) {
             handleErrorValidation(input, "Ce champs ne peut pas être vide.");
             hasError = true;
             continue;
         }
+
         if (!validateInput(input) && !hasError) {
             hasError = true;
-
         }
     }
+
     // Start inline validation
     inlineValidation();
+
     return !hasError;
 };
 
@@ -143,7 +145,7 @@ const isValidEmail = (value) => {
 };
 
 const isValidName = (value) => {
-    const regex = /^(?!.*['-]{2})[a-zA-Z][a-zA-Z ,.'-]+$/;
+    const regex = /^(?!.*[.'-]{2})[a-zA-Z][a-zA-Z ,.'-]+$/;
     return regex.test(value);
 };
 
