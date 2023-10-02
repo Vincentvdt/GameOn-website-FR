@@ -1,11 +1,7 @@
 // Function to toggle header responsiveness
 const editNav = () => {
-    let x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
+    const x = document.getElementById("myTopnav");
+    x.className === "topnav" ? x.className += " responsive" : x.className = "topnav";
 };
 
 // DOM Elements
@@ -239,6 +235,6 @@ const displaySuccessMessage = () => {
 };
 
 // Event listeners for opening and closing the modal
-modalBtn.forEach((btn) => btn.addEventListener("click", openModal));
+modalBtn.forEach(btn => btn.addEventListener("click", openModal));
 modalCloseBtn.addEventListener("click", closeModal);
 form.addEventListener("submit", handleFormSubmit);
