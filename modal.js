@@ -15,6 +15,8 @@ const modalBtn = document.querySelectorAll(".modal-btn")
 const inputsWrapper = document.querySelectorAll('.formInput')
 const form = document.querySelector('.modalForm')
 
+const heroBanner = document.querySelector('.hero-section');
+
 // Animation const of the modal when the modal is oppended
 const launchModal = () => {
     modalbg.style.display = "block"
@@ -24,6 +26,10 @@ const launchModal = () => {
         // temporisation
         duration: 400, iterations: 1, easing: "cubic-bezier(.35,.43,.18,1.54)"
     },)
+
+    if (innerWidth <= 500 && heroBanner.style.display !== "none") {
+        heroBanner.style.display = "none";
+    }
 }
 
 // Animation function of the modal when the modal is closed
@@ -38,6 +44,9 @@ const closeModal = () => {
             // temporisation
             duration: 400, iterations: 1, easing: "cubic-bezier(.35,.43,.18,1.54)"
         })
+    if (innerWidth <= 500 && heroBanner.style.display === "none") {
+        heroBanner.style.display = "block";
+    }
 }
 
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal))

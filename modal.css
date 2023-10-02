@@ -35,10 +35,23 @@ img {
     justify-content: space-between;
     align-items: center;
     margin: 3.5%;
+    height: 48px;
 }
 
 .header-logo {
     float: left;
+    width: 277px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 100%;
+
+    height: auto;
 }
 
 .main-navbar {
@@ -53,12 +66,28 @@ img {
 .topnav a {
     float: left;
     display: block;
-    color: #000000;
     text-align: center;
     padding: 12px 12px;
     text-decoration: none;
-    font-size: 20px;
-    font-family: Roboto, sans-serif;
+}
+
+.main-navbar a span {
+    color: #232323;
+    font-family: DM Sans, sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.main-navbar a:hover span {
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+.main-navbar a.active span {
+    color: #ffffff;
 }
 
 .topnav a:hover {
@@ -77,10 +106,36 @@ img {
     display: none;
 }
 
+@media screen and (max-width: 1024px) {
+    .topnav {
+        flex-direction: column;
+        height: unset;
+        gap: 30px;
+    }
+
+    .main-navbar a span {
+        font-size: 1rem;
+    }
+
+
+}
+
+
 @media screen and (max-width: 768px) {
 
     .topnav {
-        align-items: flex-start;
+        flex-direction: row;
+        height: 48px;
+        gap: unset;
+    }
+
+    .main-navbar a span {
+        font-size: 1rem;
+    }
+
+    .header-logo {
+        height: 100%;
+        width: 108px;
     }
 
     .main-navbar {
@@ -93,6 +148,7 @@ img {
     .topnav a {
         display: none;
         height: 48px;
+
     }
 
     .topnav a.icon {
@@ -142,7 +198,6 @@ img {
 
     .topnav.responsive .main-navbar {
         width: 100%;
-        top: unset;
         right: unset;
     }
 }
@@ -206,7 +261,7 @@ main {
 .bground {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 999;
     left: 0;
     top: 0;
     height: 100%;
@@ -754,6 +809,24 @@ footer {
     font-size: 2.25rem;
     font-weight: 400;
     line-height: 142.6%;
+}
+
+@media screen and (max-width: 500px) {
+
+    .bground {
+        position: unset;
+        background-color: unset;
+    }
+
+    .content {
+        margin: 0;
+        width: unset;
+        max-width: unset;
+    }
+
+    .location-grid {
+        grid-template-columns: repeat(2, auto);
+    }
 }
 
 @keyframes shake {
