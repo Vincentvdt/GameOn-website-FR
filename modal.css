@@ -11,7 +11,6 @@
 }
 
 /* Landing Page */
-
 body {
     display: flex;
     flex-direction: column;
@@ -50,7 +49,6 @@ img {
 
 .header-logo img {
     width: 100%;
-
     height: auto;
 }
 
@@ -116,13 +114,9 @@ img {
     .main-navbar a span {
         font-size: 1rem;
     }
-
-
 }
 
-
 @media screen and (max-width: 768px) {
-
     .topnav {
         flex-direction: row;
         height: 48px;
@@ -148,7 +142,6 @@ img {
     .topnav a {
         display: none;
         height: 48px;
-
     }
 
     .topnav a.icon {
@@ -212,8 +205,6 @@ main {
     margin: 1px 20px 15px;
     border-radius: 2rem;
     text-align: justify;
-
-
 }
 
 .modal-btn {
@@ -239,7 +230,6 @@ main {
 }
 
 /* Modal form */
-
 .button {
     background: #fe142f;
     margin-top: 0.5em;
@@ -274,8 +264,10 @@ main {
     margin: 5% auto;
     width: 100%;
     max-width: 500px;
-    /*animation-name: modalopen;*/
-    /*animation-duration: var(--modal-duration);*/
+    /*animation-name: modalopen;
+    */
+    /*animation-duration: var(--modal-duration);
+    */
     background: #232323;
     border-radius: 10px;
     overflow: hidden;
@@ -293,67 +285,104 @@ main {
     min-height: 830px;
 }
 
-/*label {*/
-/*    font-family: var(--font-default);*/
-/*    font-size: 17px;*/
-/*    font-weight: normal;*/
-/*    display: inline-block;*/
-/*    margin-bottom: 11px;*/
-/*    line-height: 100%;*/
-/*}*/
-
-/*input {*/
-/*    padding: 8px;*/
-/*    border: 0.8px solid #ccc;*/
-/*    outline: none;*/
-/*}*/
-
-/*.text-control {*/
-/*    margin: 0;*/
-/*    padding: 8px;*/
-/*    width: 100%;*/
-/*    border-radius: 8px;*/
-/*    font-size: 20px;*/
-/*    height: 48px;*/
-/*}*/
-
-/*.formData[data-error]::after {*/
-/*    content: attr(data-error);*/
-/*    font-size: 0.4em;*/
-/*    color: #e54858;*/
-/*    display: block;*/
-/*    margin-top: 7px;*/
-/*    margin-bottom: 7px;*/
-/*    text-align: right;*/
-/*    line-height: 0.3;*/
-/*    opacity: 0;*/
-/*    transition: 0.3s;*/
-/*}*/
-
-/*.formData[data-error-visible="true"]::after {*/
-/*    opacity: 1;*/
-/*}*/
-
-/*.formData[data-error-visible="true"] .text-control {*/
-/*    border: 2px solid #e54858;*/
-/*}*/
-
+/*label {
+    */
+/* font-family: var(--font-default);
+*/
+/* font-size: 17px;
+*/
+/* font-weight: normal;
+*/
+/* display: inline-block;
+*/
+/* margin-bottom: 11px;
+*/
+/* line-height: 100%;
+*/
 /*
-input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
-} */
-.radio-label,
-.checkbox-label {
+}
+*/
+/*input {
+    */
+/* padding: 8px;
+*/
+/* border: 0.8px solid #ccc;
+*/
+/* outline: none;
+*/
+/*
+}
+*/
+/*.text-control {
+    */
+/* margin: 0;
+*/
+/* padding: 8px;
+*/
+/* width: 100%;
+*/
+/* border-radius: 8px;
+*/
+/* font-size: 20px;
+*/
+/* height: 48px;
+*/
+/*
+}
+*/
+/*.formData[data-error]::after {
+    */
+/* content: attr(data-error);
+*/
+/* font-size: 0.4em;
+*/
+/* color: #e54858;
+*/
+/* display: block;
+*/
+/* margin-top: 7px;
+*/
+/* margin-bottom: 7px;
+*/
+/* text-align: right;
+*/
+/* line-height: 0.3;
+*/
+/* opacity: 0;
+*/
+/* transition: 0.3s;
+*/
+/*
+}
+*/
+/*.formData[data-error-visible="true"]::after {
+    */
+/* opacity: 1;
+*/
+/*
+}
+*/
+/*.formData[data-error-visible="true"] .text-control {
+    */
+/* border: 2px solid #e54858;
+*/
+/*
+}
+*/
+/* input[data-error]::after {
+     content: attr(data-error);
+     font-size: 0.4em;
+     color: red;
+}
+ */
+.radio-label, .checkbox-label {
     position: relative;
     margin-left: 30px;
     font-size: 12px;
     font-weight: normal;
 }
 
-.radio-label .radio-icon,
-.checkbox-label .checkbox-icon {
+.radio-label .radio-icon, .checkbox-label .checkbox-icon {
     display: block;
     width: 20px;
     height: 20px;
@@ -367,8 +396,7 @@ input[data-error]::after {
     transition: background 0.3s;
 }
 
-.radio-label .radio-icon::after,
-.checkbox-label .checkbox-icon::after {
+.radio-label .radio-icon::after, .checkbox-label .checkbox-icon::after {
     content: "";
     width: 13px;
     height: 13px;
@@ -389,8 +417,7 @@ input[data-error]::after {
     visibility: hidden;
 }
 
-.radio-input:checked + .radio-label .radio-icon::after,
-.checkbox-input:checked + .checkbox-label .checkbox-icon::after {
+.radio-input:checked + .radio-label .radio-icon::after, .checkbox-input:checked + .checkbox-label .checkbox-icon::after {
     opacity: 1;
 }
 
@@ -428,8 +455,7 @@ input[data-error]::after {
     transform: scale(0.7);
 }
 
-.modal-close:before,
-.modal-close:after {
+.modal-close:before, .modal-close:after {
     position: absolute;
     left: 15px;
     content: " ";
@@ -446,8 +472,7 @@ input[data-error]::after {
     transform: rotate(-45deg);
 }
 
-.btn-submit,
-.btn-signup {
+.btn-submit, .btn-signup {
     background: #fe142f;
     display: block;
     margin: 0 auto;
@@ -496,8 +521,7 @@ input[data-error]::after {
     top: 13px;
 }
 
-.select-items div,
-.select-selected {
+.select-items div, .select-selected {
     color: #000;
     padding: 11px 16px;
     border: 1px solid transparent;
@@ -522,8 +546,7 @@ input[data-error]::after {
     display: none;
 }
 
-.select-items div:hover,
-.same-as-selected {
+.select-items div:hover, .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -677,14 +700,12 @@ footer {
     }
 }
 
-
 /* CUSTORM CSS */
 @keyframes modalclose {
     from {
         opacity: 1;
     }
     to {
-
         opacity: 0;
         transform: translateY(150px);
     }
@@ -768,12 +789,13 @@ footer {
 
 .location-grid {
     display: grid;
-    grid-template-columns: repeat(4, auto); /* Columns adjust to content width */
-    grid-template-rows: repeat(2, 1fr); /* 2 rows with equal height */
+    grid-template-columns: repeat(4, auto);
+    /* Columns adjust to content width */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 rows with equal height */
     gap: 13px;
     white-space: nowrap;
 }
-
 
 .checkbox-container {
     display: flex;
@@ -792,9 +814,7 @@ footer {
     text-align: center;
     font-family: DM Sans, sans-serif;
     font-size: 14px;
-
     font-weight: 500;
-
 }
 
 .content.shake {
@@ -812,7 +832,6 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-
     .bground {
         position: unset;
         background-color: unset;
@@ -830,21 +849,16 @@ footer {
 }
 
 @keyframes shake {
-    10%,
-    90% {
+    10%, 90% {
         transform: translate3d(-1px, 0, 0);
     }
-    20%,
-    80% {
+    20%, 80% {
         transform: translate3d(2px, 0, 0);
     }
-    30%,
-    50%,
-    70% {
+    30%, 50%, 70% {
         transform: translate3d(-4px, 0, 0);
     }
-    40%,
-    60% {
+    40%, 60% {
         transform: translate3d(4px, 0, 0);
     }
 }
